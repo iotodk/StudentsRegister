@@ -1,0 +1,28 @@
+﻿@using StudentsRegister.Models;
+@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "Students";
+}
+<h2>List of students</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>CPR</th>
+            <th>Gender</th>
+            <th>Birthdate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td><a href="/students/edit/@student.Id">@student.Name</a></td>
+                <th>@student.CPR</th>
+                <th>@student.Gender</th>
+                <th>@student.BirthDate</th>
+            </tr>
+        }
+    </tbody>
+</table>

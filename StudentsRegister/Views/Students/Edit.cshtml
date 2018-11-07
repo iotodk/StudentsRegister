@@ -1,0 +1,9 @@
+﻿@model StudentsRegister.Models.Student
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>You are editing @Model.Name</h2>
+<input type="text" name="studentName" value="@Model.Name" /><br /><br />                                                                  
+<input type="text" name="studentCPR" value="@Model.CPR" /><br /><br />
+<a href="/students" class="btn btn-primary">Save</a>
